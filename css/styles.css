@@ -1,8 +1,11 @@
+/*** GENERAL SETUP/HOUSEKEEPING ***/
 *
 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    text-decoration: none;
 }
 
 html,
@@ -10,16 +13,13 @@ body
 {
     height: 100%;
     margin: 0;
+
+    background-color: aliceblue;
 }
 
 @font-face
 {
     font-family: 'Nunito Sans', Calibri;
-}
-
-body
-{
-    background-color: aliceblue;
 }
 
 #wrapper
@@ -34,7 +34,7 @@ body
 
     text-align: center;
 
-    background-color: lightgray;
+    background-color: #f2f2f2;
     box-shadow: 3px 3px 5px #666;
 }
 
@@ -43,7 +43,6 @@ body
 header
 {
     position: relative;
-    /*border-bottom: 5px solid black;*/
 
     float: left;
 
@@ -104,8 +103,6 @@ nav a
 
     padding: 0 20px;
 
-    text-decoration: none;
-
     color: black;
 }
 
@@ -134,7 +131,6 @@ h1
     margin: 5% 5%;
     padding: 10px;
 
-    text-decoration: none;
     text-transform: uppercase;
 
     color: black;
@@ -147,10 +143,10 @@ h2
 {
     font-family: Calibri;
     font-size: 1.5em;
-
+    margin-bottom: 15px;
     display: inline-block;
 
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
 }
 
 h3
@@ -267,15 +263,20 @@ select
     border: 2px solid black;
 }
 
+input[type=text]:focus {
+    border:2px solid lightgreen;
+}
+
 
 textarea
 {
     width: 500px;
     height: 300px;
     margin: 10px auto;
+    font-size: 1.2em;
 
     border: 2px solid black;
-    background: lightgreen;
+    background: linear-gradient(lightgreen 65%, #d2f9d2);
 }
 
 input[type=submit]
