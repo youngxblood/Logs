@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/normalize.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title><?php echo $pageTitle; ?></title>
+    <title><?php echo $pageTitle; ?></title> <!-- VARIABLE $pageTitle DECLARED AT THE TOP OF EACH PAGE -->
 
-</head>
+</head class="container">
 <body>
 <header>
     <a href="index.php"><h1>Loggy: For You</h1></a>
@@ -24,6 +27,9 @@
         <a href="userfeedback.php?cat=feedback" class="<?php if ($section == "feedback") {
             echo "on";
         } ?>">FEEDBACK</a>
+                <a href="bootstrap.php?cat=bootstrap" class="<?php if ($section == "bootstrap") {
+            echo "on";
+        } ?>">BOOTSTRAP</a>
     </nav>
 
 </header>

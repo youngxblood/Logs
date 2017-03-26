@@ -6,6 +6,8 @@ if (isset($_GET["cat"])) {
         $section = "logs";
     } else if ($_GET["cat"] == "feedback") {
         $section = "feedback";
+    } else if ($_GET["cat"] == "bootstrap") {
+        $section = "bootstrap";
     }
 }
 ?>
