@@ -12,9 +12,10 @@
 
 </head>
 <body>
-<header>
+<header><span class="date"> <?php echo date("l, j, F") ?> </span>
 <div class="col-lg-8 col-md-8 col-sm-8">
-<h1>LOGGY: <small>WEEKLY PERSONAL UPDATES</small></h1>
+<h1>LOGGY: <small>WEEKLY PERSONAL UPDATES</small></h1><br>
+
 </div>
 </header>
 
@@ -23,7 +24,9 @@
 
 
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php">Home</a></li>
+      <li><a href="index.php?cat=home" class="<?php if ($section == "home") {
+            echo "on";
+        } ?>">HOME</a></li>
          <li><a href="about.php?cat=about" class="<?php if ($section == "about") {
             echo "on";
         } ?>">ABOUT</a></li>

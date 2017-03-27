@@ -1,46 +1,44 @@
 <?php
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "testdb";
 
-$user = 'root';
-$pass = '';
-$db = 'testdb';
-$host = 'localhost';
-
-try {
-    $db = new PDO("mysql:host=$host;dbname=testdb",$user,$pass);
-
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // <== add this line
-    echo 'Connected to Database.<br/>';
-}
-catch(PDOException $e)
-    {
-    echo $e->getMessage();
-    }
-
-$con = mysql_connect($host,$user,$pass);
-
-if (!$db){
-	echo 'Cannot connect.'; //DEPRECATED
-} else {
-	echo "Connected.<br>";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "CREATE TABLE IF NOT EXISTS MyGuests (
+
+// sql to create table
+$sql = "CREATE TABLE MyGuests (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 firstname VARCHAR(30) NOT NULL,
 lastname VARCHAR(30) NOT NULL,
 email VARCHAR(50),
-reg_date TIMESTAMP
-)";
+reg_date TIMESTAMP)";
 
-if ($db->query($query) == TRUE) {
-    echo "Table MyGuests created successfully<br>";
+
+$tableExists = mysql_query("DESCRIBE `MyGuests`");
+if(mysql_query("DESCRIBE `MyGuests`")) {
+    echo "Table already exists.";
 } else {
-    echo "Error creating table:<br>";
+    $conn->query($sql);
+    echo "Table created.";
 }
+var_dump($tableExists);
 
 
+// if ($conn->query($sql) === TRUE) {
+//     echo "Table MyGuests created successfully";
+// } else {
+//     echo "Error creating table: " . $conn->error;
+// }
 
+// $conn->close();
 
 
 

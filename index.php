@@ -1,4 +1,5 @@
 <?php $pageTitle = "Home";
+$section = 'home';
 include "inc/header.php";
 include "inc/linkstyler.php";
 include "inc/connection.php";
