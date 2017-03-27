@@ -13,23 +13,33 @@
 </head>
 <body>
 <header>
-    <a href="index.php"><h1>Loggy: For You</h1></a>
-    <br/>       <!--     |Below is the date function that grabs the date real-time|     -->
-    <span class="date"> <?php echo date("l, j, F") ?> </span>
-
-    <nav class="headerNAV"> <!--     |PHP to enable link styling, $section = page|     -->
-        <a href="about.php?cat=about" class="<?php if ($section == "about") {
-            echo "on";
-        } ?>">ABOUT</a>
-        <a href="logs.php?cat=logs" class="<?php if ($section == "logs") {
-            echo "on";
-        } ?>">LOGS</a>
-        <a href="userfeedback.php?cat=feedback" class="<?php if ($section == "feedback") {
-            echo "on";
-        } ?>">FEEDBACK</a>
-                <a href="bootstrap.php?cat=bootstrap" class="<?php if ($section == "bootstrap") {
-            echo "on";
-        } ?>">BOOTSTRAP</a>
-    </nav>
-
+<div class="col-lg-8 col-md-8 col-sm-8">
+<h1>LOGGY: <small>WEEKLY PERSONAL UPDATES</small></h1>
+</div>
 </header>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.php">Home</a></li>
+         <li><a href="about.php?cat=about" class="<?php if ($section == "about") {
+            echo "on";
+        } ?>">ABOUT</a></li>
+        <li><a href="logs.php?cat=logs" class="<?php if ($section == "logs") {
+            echo "on";
+        } ?>">LOGS</a></li>
+        <li><a href="userfeedback.php?cat=feedback" class="<?php if ($section == "feedback") {
+            echo "on";
+        } ?>">FEEDBACK</a></li>
+        <li><a href="bootstrap.php?cat=bootstrap" class="<?php if ($section == "bootstrap") {
+            echo "on";
+        } ?>">BOOTSTRAP</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
