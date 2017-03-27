@@ -3,17 +3,26 @@ include "inc/header.php";
 include "inc/linkstyler.php";
 ?>
 
-<p>
-
     <?php
-    if (isset ($_POST["name"])) {
-        echo $_POST ['name'] . "<br>";
-    } else {
-        echo "Post 'test' is empty!<br>";
-      }
-      echo $_POST ['email'];
+
+      $con = mysql_connect("localhost", "root", "") or
+      die("Could not connect: " . mysql_error());
+      mysql_select_db("testdb");
+
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      $email = $_POST['email'];
+
+
+      $sql =  mysql_query("INSERT INTO MyGuests (firstname, lastname, email)
+              VALUES ('$fname', '$lname', '$email')");
+
+
+
     ?>
-</p>
+    <div id="wrapper">
+      <h3>Thank you for loggin in, <?php echo $_POST['fname']?>.</h3>
+    </div>
 </body>
 </html>
 

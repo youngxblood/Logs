@@ -33,13 +33,12 @@ include "inc/linkstyler.php";
                 </label>
             </input>
             <textarea cols="50" placeholder="Type text here..." rows="4">
-</textarea>
-<input name="submit" type="submit">
-</input>
+            </textarea>
+            <input name="submit" type="submit">
+            </input>
         </form>
     </div>
 </div>
-
 <?php
     include "inc/footer.php"
  ?>

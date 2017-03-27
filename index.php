@@ -1,6 +1,7 @@
 <?php $pageTitle = "Home";
 include "inc/header.php";
-
+include "inc/linkstyler.php";
+include "inc/connection.php";
 ?>
 
 <div class="content">
@@ -20,7 +21,8 @@ include "inc/header.php";
     </p>
     <br/>
     <form action="welcome.php" method="post">
-        Name: <input type="text" name="name"><br>
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
         E-mail: <input type="text" name="email"><br>
         <input type="submit">
     </form>

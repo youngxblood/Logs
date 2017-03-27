@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title><?php echo $pageTitle; ?></title> <!-- VARIABLE $pageTitle DECLARED AT THE TOP OF EACH PAGE -->
 
-</head class="container">
+</head>
 <body>
 <header>
     <a href="index.php"><h1>Loggy: For You</h1></a>

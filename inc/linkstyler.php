@@ -1,6 +1,8 @@
 <?php
 if (isset($_GET["cat"])) {
-    if ($_GET["cat"] == "about") {
+	if ($_GET["cat"] == null) {
+        $section = "";
+    } else if ($_GET["cat"] == "about") {
         $section = "about";
     } else if ($_GET["cat"] == "logs") {
         $section = "logs";
