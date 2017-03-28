@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<header><span class="date"> <?php echo date("l, j, F") ?> </span>
+<header>
+<span class="date"> <?php echo date("l, j, F") ?> </span>
 <div class="col-lg-8 col-md-8 col-sm-8">
 <h1>LOGGY: <small>WEEKLY PERSONAL UPDATES</small></h1><br>
 

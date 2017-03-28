@@ -32,13 +32,35 @@ include "inc/linkstyler.php";
                     Body:
                 </label>
             </input>
-            <textarea cols="50" placeholder="Type text here..." rows="4">
+            <textarea cols="50" placeholder="Type text here..." rows="4" name="postbody">
             </textarea>
             <input name="submit" type="submit">
             </input>
         </form>
+                <!-- PHP/SQL TO INSERT FORM DATA INTO -->
+        <?php
+            include "inc/connection.php";
+            include "inc/sqltableinit.php";
+                 if ( isset($_POST['posttitle']) && isset($_POST['postbody'] ) ) {
+                $logtitle = $_POST['posttitle'];
+                $logbody = $_POST['postbody'];
+                $success = true;
+                 } else {
+                $logtitle = '';
+                $logbody = '';
+                $success = false;
+                }
+
+                 $sql = "INSERT INTO UserNotes (log_summ, log_body)
+                    VALUES ('$logtitle', '$logbody')";
+
+                 if ($success == true) {
+                 $conn->query($sql);
+                 echo "New record created successfully";
+        }
+        ?>
     </div>
 </div>
-<?php
-    include "inc/footer.php"
- ?>
+
+<?php include "inc/footer.php"?>
+

@@ -27,5 +27,8 @@ include "inc/linkstyler.php";
 </html>
 
 <?php
+    include "inc/connection.php";
+    // $sql = "SELECT * FROM MyGuests";
+    $conn->query($sql);
     include "inc/footer.php"
  ?>
