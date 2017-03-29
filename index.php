@@ -22,12 +22,20 @@ include "inc/sqltableinit.php";
         Here I am testing my wrappers to make sure they work. I am also testing my 'p' tags and their styling.
     </p>
     <br/>
-    <form action="welcome.php" method="post">
-        First name: <input type="text" name="fname"><br>
+    <form action="register.php" method="post">
+<!--         First name: <input type="text" name="fname"><br>
         Last name: <input type="text" name="lname"><br>
-        E-mail: <input type="text" name="email"><br>
+        E-mail: <input type="text" name="email"><br> -->
+        <input type="submit" name="btn-signup">
+    </form>
+
+    <form action="<?php echo htmlspecialchars('register.php'); ?>" method="post">
+    Full name: <input type="text" name="name"><br>
+        Password: <input type="text" name="pass"><br>
+        Email: <input type="text" name="email"><br>
         <input type="submit">
     </form>
+
 
 
 </div>

@@ -40,6 +40,7 @@
         <li><a href="bootstrap.php?cat=bootstrap" class="<?php if ($section == "bootstrap") {
             echo "on";
         } ?>">BOOTSTRAP</a></li>
+        <li><a href="register.php">REGISTER</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
